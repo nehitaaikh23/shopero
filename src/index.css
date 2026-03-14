@@ -1,0 +1,15 @@
+:root, button, body, input {
+  font-family: "Poppins", sans-serif;
+}
+
+
+*, button{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
