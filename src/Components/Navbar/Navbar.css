@@ -64,6 +64,7 @@
     outline: none;
     border: 1px solid #7a7a7a;
     background: inherit;
+    color: black;
     border-radius: 50px;
     font-size: 12px;
     cursor: pointer;
