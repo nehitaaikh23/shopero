@@ -28,10 +28,10 @@ const Navbar = () => {
             <li onClick={() => {setMenu('shop')}}><Link to="/">Shop</Link>{menu==="shop" ? <hr/> :"" }</li>
             <li onClick={() => {setMenu('men')}}><Link to="/mens">Abobi</Link>{menu==="men" ? <hr/>: ""}</li>
             <li onClick={() => {setMenu('women')}}><Link to="/womens">Shima</Link>{menu==="women" ? <hr/>:"" }</li>
-            <li onClick={() => {setMenu('kids')}}><Link to="/kids">Pikin</Link>{menu==="kids" ? <hr/>:"" }</li>
+            <li onClick={() => {setMenu('kid')}}><Link to="/kids">Pikin</Link>{menu==="kid" ? <hr/>:"" }</li>
         </ul>
         <div className="nav-login-cart">
-            <button><Link to="/login">Login</Link></button>
+            {(localStorage.getItem('auth-token'))?<button onClick={()=>{localStorage.removeItem('auth-token');window.location.replace('/')}}>Logout</button>:<button><Link to="/login">Login</Link></button>}
             <Link to="/cart"><img src={cart_icon} alt="" /></Link>
             <div className="cart-counter">{getTotalCartItems()}</div>
         </div>
