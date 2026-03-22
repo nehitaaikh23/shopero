@@ -9,11 +9,13 @@ const ShopCategory = (props) => {
 
   const {all_product} = useContext(ShopContext)
 
+  const noProductsInDisplay = all_product.length;
+
   return (
     <div className='shop-category'>
       <img src={props.banner} alt="" className='banner'/>
       <div className="shop-category-indexSort">
-        <p><span>Showing 1-12 of 36 products</span></p>
+        <p><span>Showing 1-12 of {noProductsInDisplay} products</span></p>
         <div className="shop-category-sort">
           Sort by <img src={dropdown_icon} alt="" />
         </div>

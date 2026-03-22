@@ -8,7 +8,7 @@ const Popular = () => {
     const [data_product, setDataProduct] = useState([])
 
     const fetchInfo = () => {
-        fetch('http://localhost:4000/popularinwomen')
+        fetch(`${import.meta.env.VITE_API_URL}/popularinwomen`)
         .then((resp) => resp.json())
         .then((data) => setDataProduct(data))
     }
